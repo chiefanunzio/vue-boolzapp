@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todolist</title>
+    <title>bzp</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -26,12 +26,13 @@
                 </ul>
             </div>
         </header>
+
         <main>
+              <!-- sezione sinistra di contatti -->
             <section class="left">
                 <div class="top-head">
-                    <div class="avatar">
+                    <div class="avatar"> <!--avatar utente -->
                         <img src="img/avatar.png" alt="">
-
                     </div>
                     <div>
                         <a href="#">+</a>
@@ -39,23 +40,35 @@
                     </div>
 
                 </div>
-                <div class="search-contact">
-                    <div>
 
+                <div class="search-contact"> <!--barra ricerca contatti-->
+                    <div>
                         <i class="fas fa-search"></i>
                         <input placeholder="cerca conversazione" type="text">
                     </div>
                 </div>
+
+                <ul>
+                    <li>
+                        <div class="avatar"> <!--avatar utente -->
+                            <img src="img/avatar.png" alt=""> <!--img da js-->
+                            <h2>Nunzio</h2>      <!--nome utente da js-->
+                            <span>13:10</span>    <!--ora da js-->
+                        </div>
+                    </li>
+                </ul>
             </section>
 
+                
+              <!-- sezione destra messaggistica -->
             <section class="rigth">
 
                 <div class="top-nav">
-                    <div class="avatar">
+                    <div class="avatar"> <!--avatar da mostrare -->
                         <img src="img/avatar.png" alt="">
-                        <h2>cico</h2>
+                        <h2>cico</h2><!--nome nuovo utente da mostrare-->
                     </div>
-                    <div class="action-menu">
+                    <div class="action-menu"> 
                         <ul>
                             <li><a href="#"><i class="fas fa-video"></i></a></li>
                             <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
@@ -68,6 +81,14 @@
 
                 </div>
 
+                <div class="messages"><!--messaggi output da js-->
+
+                </div>
+
+                <div class="user-messages"> <!--messaggi scritti dall'utente-->
+
+                </div>
+                        <!-- barra di input nuovo messaggio  -->
                 <footer>
                     <ul>
                         <li><a href="#"><i class="far fa-grin"></i></a></li>
