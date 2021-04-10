@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+p{
+    color: azure;
+}
+
 ul li {
 
     list-style: none;
@@ -34,7 +38,11 @@ section.left {
     background-color: rgb(8 10 19);
     border-right: 1px solid grey;
     flex-direction: column;
+    
+}
 
+section.left > ul li{
+    border-bottom: 1px solid grey;
 }
 
 section.rigth {
@@ -60,13 +68,23 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+
+}
+
+.avatar h2{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
 }
 
 
 .avatar img {
-    width: 50px;
+   width: 50px;
     border-radius: 50%;
+    vertical-align: middle;
 }
+
 
 .top-head {
     padding: 0 20px;
@@ -188,6 +206,17 @@ footer ul li a {
 
 .left>ul li, .left > ul li .avatar {
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
+p.user{
+    padding: 5px 10px;
+    color: azure;
+    background-color:darkgreen;
+}
+
+p.contact{
+    padding: 5px 10px;
+    color: azure;
+    background-color: rgb(80, 75, 75);
+}

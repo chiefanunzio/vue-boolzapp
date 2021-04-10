@@ -49,10 +49,13 @@
                 </div>
 
                 <ul>
-                    <li>
-                        <div class="avatar"> <!--avatar utente -->
-                            <img src="img/avatar.png" alt=""> <!--img da js-->
-                            <h2>Nunzio</h2>      <!--nome utente da js-->
+                    <li @click="getContacts" v-for="(name, index ) in contacts">
+                        <div class="avatar" > <!--avatar utente -->
+                            <div>
+                                <img :src="name.avatar" alt=""> 
+                                <h2> {{name.name}}</h2>      <!--nome utente da js-->
+                            </div>
+
                             <span>13:10</span>    <!--ora da js-->
                         </div>
                     </li>
@@ -83,10 +86,15 @@
 
                 <div class="messages"><!--messaggi output da js-->
 
-                </div>
+                    <ul>
+                        <li>
+                            <p class="user"></p>
+                            <p class="contact"></p>
+                        </li>
+                        <li>
+                        </li>
 
-                <div class="user-messages"> <!--messaggi scritti dall'utente-->
-
+                    </ul>
                 </div>
                         <!-- barra di input nuovo messaggio  -->
                 <footer>
