@@ -209,13 +209,28 @@ footer ul li a {
     justify-content: space-between;
 }
 
-p.user{
+.messages{
+    width: 100%;
+}
+
+.messages ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+
+.user{
+    
     padding: 5px 10px;
     color: azure;
     background-color:darkgreen;
+    align-self: flex-end;
 }
 
-p.contact{
+.contact{
+    align-self: flex-start;
     padding: 5px 10px;
     color: azure;
     background-color: rgb(80, 75, 75);

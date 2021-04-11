@@ -23,24 +23,25 @@
 
 // Milestone 5 - opzionale● 
 //Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
-// permette di cancellare il messaggio selezionato● Visualizzazione ora e ultimo messaggio inviato / ricevuto nella lista dei contatti
+// permette di cancellare il messaggio selezionato
+//●Visualizzazione ora e ultimo messaggio inviato / ricevuto nella lista dei contatti
 // Consigli utili: ●Si possono trascurare le scrollbar verticali, sia nel pannello dei messaggi, che nella
 // lista dei contatti● I pulsanti e le icone possono non funzionare(a parte l’ invio del messaggio)● Per gestire le date, può essere utile la libreria day.js● La struttura dell’ array dei contatti potrebbe avere questa forma:
 
 
 
 
-    function init(){
+function init() {
 
-        new Vue({
+    new Vue({
 
-            el:'#app',
-            data:{
-                userMessage:'',
+        el: '#app',
+        data: {
+            indexContact:0,
 
-                contacts: [{
+            contacts: [{
                     name: 'louise',
-                    avatar: '../img/pg.png.crdownload',
+                    avatar: '../img/pg.png',
                     visible: true,
                     messages: [{
                             date: '10/01/2020 15:30:55',
@@ -82,7 +83,7 @@
                 },
                 {
                     name: 'Homer',
-                    avatar: '../img/homer.png.crdownload',
+                    avatar: '../img/homer.png',
                     visible: true,
                     messages: [{
                             date: '28/03/2020 10:10:40',
@@ -103,7 +104,7 @@
                 },
                 {
                     name: 'Bart',
-                    avatar: '../img/bart.png.crdownload',
+                    avatar: '../img/bart.png',
                     visible: true,
                     messages: [{
                             date: '10/01/2020 15:30:55',
@@ -120,20 +121,38 @@
             ]
 
 
-            },
-            methods:{
+        },
+        methods: {
 
-                getContacts: function () {
-                  
+            // getMessages: function (contact) {
 
-                    
-                }
+            //     let messages = this.messages = contact.messages;
+              
+            //     messages.forEach(msg => {
+            //         let text = msg['text'];
+            //         let data = msg['date'];
+            //         let status = msg['status'];
+
+            //         console.log(text);
+            //     });
+            //},
+            getIndex: function(i){
+
+                this.indexContact = i;
+                console.log(i);
             }
-           
-
-        });
+        },
 
 
-    }
 
-    document.addEventListener('DOMContentLoaded', init)
+
+
+
+
+
+    });
+
+
+}
+
+document.addEventListener('DOMContentLoaded', init)

@@ -49,14 +49,14 @@
                 </div>
 
                 <ul>
-                    <li @click="getContacts" v-for="(name, index ) in contacts">
+                    <li @click = "getIndex(index)" v-for="(name, index ) in contacts">
                         <div class="avatar" > <!--avatar utente -->
                             <div>
                                 <img :src="name.avatar" alt=""> 
-                                <h2> {{name.name}}</h2>      <!--nome utente da js-->
+                                <h2> {{name.name}}</h2>  <!--nome utente da js-->
                             </div>
 
-                            <span>13:10</span>    <!--ora da js-->
+                            <span></span>    <!--ora da js-->
                         </div>
                     </li>
                 </ul>
@@ -68,8 +68,8 @@
 
                 <div class="top-nav">
                     <div class="avatar"> <!--avatar da mostrare -->
-                        <img src="img/avatar.png" alt="">
-                        <h2>cico</h2><!--nome nuovo utente da mostrare-->
+                        <img :src="contacts[indexContact].avatar" alt="">
+                        <h2>{{contacts[indexContact].name}}</h2><!--nome nuovo utente da mostrare-->
                     </div>
                     <div class="action-menu"> 
                         <ul>
@@ -86,15 +86,18 @@
 
                 <div class="messages"><!--messaggi output da js-->
 
-                    <ul>
-                        <li>
-                            <p class="user"></p>
-                            <p class="contact"></p>
+                    <ul v-for = "msg in contacts[indexContact].messages">
+                        <li class="user" v-if ="msg.status == 'sent'">
+                            <p >{{msg.text}}</p>
                         </li>
-                        <li>
+                        <li class="contact" v-else>
+                            <p >{{msg.text}}</p>
+                            
                         </li>
-
                     </ul>
+                    
+                        
+
                 </div>
                         <!-- barra di input nuovo messaggio  -->
                 <footer>
