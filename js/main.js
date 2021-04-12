@@ -166,9 +166,9 @@ function init() {
                 },
             ],
             newMessage: {
-                    date: '10/01/2020 15:50:00',
-                    text: '',
-                    status: 'sent'
+                date: '10/01/2020 15:50:00',
+                text: '',
+                status: 'sent'
             },
 
 
@@ -181,19 +181,33 @@ function init() {
                 console.log(i);
             },
 
-           
+
 
             addMessage: function () {
-                
-                if(this.newMessage.text.length > 0){
-                    this.contacts[this.indexContact].messages.push(this.newMessage);
+
+                if (this.newMessage.text.length > 0) {
                    
-
-
+                    this.contacts[this.indexContact].messages.push({
+                        ...this.newMessage
+                    });
+                    setTimeout(this.botMessage,2000);
+                    this.newMessage.text = '';
+                    
+                    
                 }
-
-               
                 
+                
+
+            },
+            botMessage: function() {
+
+                this.newMessage.text = 'ok';
+                this.newMessage.status='received'
+                this.contacts[this.indexContact].messages.push({
+                    ...this.newMessage
+                });
+
+                this.newMessage.text = '';
             }
         },
 
