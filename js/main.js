@@ -208,7 +208,12 @@ function init() {
                 });
 
                 this.newMessage.text = '';
-            }
+            },
+            // filteredName: function() {
+            //     return this.contacts.filter(item => {
+            //       return item.name.toLowerCase().includes(this.src.toLowerCase());
+            //     });
+            //   }
         },
 
 
