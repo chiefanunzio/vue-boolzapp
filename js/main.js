@@ -37,7 +37,7 @@ function init() {
 
         el: '#app',
         data: {
-            indexContact:0,
+            indexContact: 0,
 
             contacts: [{
                     name: 'louise',
@@ -103,7 +103,7 @@ function init() {
                             text: 'Tutto fatto!',
                             status: 'received'
                         }
-                        
+
                     ],
                 },
                 {
@@ -164,18 +164,38 @@ function init() {
                         }
                     ],
                 },
-            ]
+            ],
+            newMessage: {
+                    date: '10/01/2020 15:50:00',
+                    text: '',
+                    status: 'sent'
+            },
 
 
         },
         methods: {
 
-            getIndex: function(i){
+            getIndex: function (i) {
 
                 this.indexContact = i;
                 console.log(i);
+            },
+
+           
+
+            addMessage: function () {
+                if(this.newMessage.text.length > 0){
+                    this.contacts[this.indexContact].messages.push(this.newMessage);
+                   
+
+
+                }
+
+               
+                
             }
         },
+
 
 
 

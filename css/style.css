@@ -38,6 +38,7 @@ section.left {
     background-color: rgb(8 10 19);
     border-right: 1px solid grey;
     flex-direction: column;
+    margin-top: 70px;
     
 }
 
@@ -87,13 +88,14 @@ main {
     height: 70px;
     color: honeydew;
     background-color: rgb(51, 51, 51);
+    border-right: 1px solid grey;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 30%;
     position: fixed;
     top: 35px;
-    right: 0;
+    left: 0;
 
 }
 
@@ -162,7 +164,10 @@ input:focus {
 .top-nav {
     padding: 0 20px;
     height: 70px;
-    width: 100%;
+    width: 70%;
+    position: fixed;
+    top: 35px;
+    right: 0;
     background-color: rgb(51, 51, 51);
     display: flex;
     justify-content: space-between;
@@ -227,7 +232,7 @@ footer ul li a {
 .messages ul li{
     border-radius: 7px;
     padding: 10px 15px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 
