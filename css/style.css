@@ -51,6 +51,7 @@ section.rigth {
     background-color: rgb(11 16 25);
     background-image: url("../img/pattern.png");
     overflow:auto ;
+    
 }
 
 main {
@@ -220,7 +221,7 @@ footer ul li a {
 
 .messages{
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 40px;
 }
 
 .messages ul{

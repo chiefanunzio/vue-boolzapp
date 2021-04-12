@@ -184,6 +184,7 @@ function init() {
            
 
             addMessage: function () {
+                
                 if(this.newMessage.text.length > 0){
                     this.contacts[this.indexContact].messages.push(this.newMessage);
                    
