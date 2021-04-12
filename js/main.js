@@ -35,186 +35,200 @@ function init() {
 
     new Vue({
 
-        el: '#app',
-        data: {
-            indexContact: 0,
+                el: '#app',
+                data: {
+                    indexContact: 0,
 
-            contacts: [{
-                    name: 'louise',
-                    avatar: '../img/pg.png',
-                    visible: true,
-                    messages: [{
-                            date: '10/01/2020 15:30:55',
-                            text: 'Hai portato a spasso il cane?',
-                            status: 'sent'
+                    contacts: [{
+                            name: 'louise',
+                            avatar: '../img/pg.png',
+                            visible: true,
+                            messages: [{
+                                    date: '10/01/2020 15:30:55',
+                                    text: 'Hai portato a spasso il cane?',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 15:50:00',
+                                    text: 'Ricordati di dargli da mangiare',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 16:15:22',
+                                    text: 'Tutto fatto!',
+                                    status: 'received'
+                                },
+                                {
+                                    date: '10/01/2020 15:30:55',
+                                    text: 'Hai portato a spasso il cane?',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 15:50:00',
+                                    text: 'Ricordati di dargli da mangiare',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 16:15:22',
+                                    text: 'Tutto fatto!',
+                                    status: 'received'
+                                },
+                                {
+                                    date: '10/01/2020 15:30:55',
+                                    text: 'Hai portato a spasso il cane?',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 15:50:00',
+                                    text: 'Ricordati di dargli da mangiare',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 16:15:22',
+                                    text: 'Tutto fatto!',
+                                    status: 'received'
+                                },
+                                {
+                                    date: '10/01/2020 15:30:55',
+                                    text: 'Hai portato a spasso il cane?',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 15:50:00',
+                                    text: 'Ricordati di dargli da mangiare',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 16:15:22',
+                                    text: 'Tutto fatto!',
+                                    status: 'received'
+                                }
+
+                            ],
                         },
                         {
-                            date: '10/01/2020 15:50:00',
-                            text: 'Ricordati di dargli da mangiare',
-                            status: 'sent'
+                            name: 'Batman',
+                            avatar: '../img/bat.jpeg',
+                            visible: true,
+                            messages: [{
+                                    date: '20/03/2020 16:30:00',
+                                    text: 'Ciao come stai?',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    text: 'Bene grazie! Stasera ci vediamo?',
+                                    status: 'received'
+                                },
+                                {
+                                    date: '20/03/2020 16:35:00',
+                                    text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                                    status: 'sent'
+                                }
+                            ],
                         },
                         {
-                            date: '10/01/2020 16:15:22',
-                            text: 'Tutto fatto!',
-                            status: 'received'
+                            name: 'Homer',
+                            avatar: '../img/homer.png',
+                            visible: true,
+                            messages: [{
+                                    date: '28/03/2020 10:10:40',
+                                    text: 'La Marianna va in campagna',
+                                    status: 'received'
+                                },
+                                {
+                                    date: '28/03/2020 10:20:10',
+                                    text: 'Sicuro di non aver sbagliato chat?',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '28/03/2020 16:15:22',
+                                    text: 'Ah scusa!',
+                                    status: 'received'
+                                }
+                            ],
                         },
                         {
-                            date: '10/01/2020 15:30:55',
-                            text: 'Hai portato a spasso il cane?',
-                            status: 'sent'
+                            name: 'Bart',
+                            avatar: '../img/bart.png',
+                            visible: true,
+                            messages: [{
+                                    date: '10/01/2020 15:30:55',
+                                    text: 'Lo sai che ha aperto una nuova pizzeria?',
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '10/01/2020 15:50:00',
+                                    text: 'Si, ma preferirei andare al cinema',
+                                    status: 'received'
+                                }
+                            ],
                         },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            text: 'Ricordati di dargli da mangiare',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 16:15:22',
-                            text: 'Tutto fatto!',
-                            status: 'received'
-                        },
-                        {
-                            date: '10/01/2020 15:30:55',
-                            text: 'Hai portato a spasso il cane?',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            text: 'Ricordati di dargli da mangiare',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 16:15:22',
-                            text: 'Tutto fatto!',
-                            status: 'received'
-                        },
-                        {
-                            date: '10/01/2020 15:30:55',
-                            text: 'Hai portato a spasso il cane?',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            text: 'Ricordati di dargli da mangiare',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 16:15:22',
-                            text: 'Tutto fatto!',
-                            status: 'received'
+                    ],
+                    newMessage: {
+                        date: '10/01/2020 15:50:00',
+                        text: '',
+                        status: 'sent'
+                    },
+                    cerca: '',
+
+
+                },
+                methods: {
+
+                    getIndex: function (i) {
+
+                        this.indexContact = i;
+                        console.log(i);
+                    },
+
+
+
+                    addMessage: function () {
+
+                        this.newMessage.status = 'sent'
+                        if (this.newMessage.text.length > 0) {
+                            this.contacts[this.indexContact].messages.push({
+                                ...this.newMessage
+                            });
+                            setTimeout(this.botMessage, 2000);
+                            this.newMessage.text = '';
+
+
                         }
 
-                    ],
-                },
-                {
-                    name: 'Batman',
-                    avatar: '../img/bat.jpeg',
-                    visible: true,
-                    messages: [{
-                            date: '20/03/2020 16:30:00',
-                            text: 'Ciao come stai?',
-                            status: 'sent'
-                        },
-                        {
-                            date: '20/03/2020 16:30:55',
-                            text: 'Bene grazie! Stasera ci vediamo?',
-                            status: 'received'
-                        },
-                        {
-                            date: '20/03/2020 16:35:00',
-                            text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                            status: 'sent'
-                        }
-                    ],
-                },
-                {
-                    name: 'Homer',
-                    avatar: '../img/homer.png',
-                    visible: true,
-                    messages: [{
-                            date: '28/03/2020 10:10:40',
-                            text: 'La Marianna va in campagna',
-                            status: 'received'
-                        },
-                        {
-                            date: '28/03/2020 10:20:10',
-                            text: 'Sicuro di non aver sbagliato chat?',
-                            status: 'sent'
-                        },
-                        {
-                            date: '28/03/2020 16:15:22',
-                            text: 'Ah scusa!',
-                            status: 'received'
-                        }
-                    ],
-                },
-                {
-                    name: 'Bart',
-                    avatar: '../img/bart.png',
-                    visible: true,
-                    messages: [{
-                            date: '10/01/2020 15:30:55',
-                            text: 'Lo sai che ha aperto una nuova pizzeria?',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            text: 'Si, ma preferirei andare al cinema',
-                            status: 'received'
-                        }
-                    ],
-                },
-            ],
-            newMessage: {
-                date: '10/01/2020 15:50:00',
-                text: '',
-                status: 'sent'
-            },
 
+
+                    },
+                    botMessage: function () {
+
+                        this.newMessage.text = 'ok';
+                        this.newMessage.status = 'received'
+                        this.contacts[this.indexContact].messages.push({
+                            ...this.newMessage
+                        });
+
+                        this.newMessage.text = '';
+                    },
+                    // filteredname: function () {
+                    //     return this.contacts.filter(elem => {
+                    //         return elem.name.toLowerCase().includes(this.cerca.toLowerCase());
+                    //     });
+            //         filteredName: function (array , text) {
+
+            //             return this.contacts[this.indexContact].filter(function (contact) {
+
+            //                 let reg = RegExp(this.cerca, 'i');
+            //                 return contact.name.match(reg);
+            //                 console.log(filteredName(contacts, ));
+            //             });
+
+            //             // let reg = RegExp(this.cerca, 'i');
+            //             // return contact.name.match(reg);
+                    
+            // }
 
         },
-        methods: {
-
-            getIndex: function (i) {
-
-                this.indexContact = i;
-                console.log(i);
-            },
-
-
-
-            addMessage: function () {
-
-                this.newMessage.status='sent'
-                if (this.newMessage.text.length > 0) {
-                    this.contacts[this.indexContact].messages.push({
-                        ...this.newMessage
-                    });
-                    setTimeout(this.botMessage,2000);
-                    this.newMessage.text = '';
-                    
-                    
-                }
-                
-                
-
-            },
-            botMessage: function() {
-
-                this.newMessage.text = 'ok';
-                this.newMessage.status='received'
-                this.contacts[this.indexContact].messages.push({
-                    ...this.newMessage
-                });
-
-                this.newMessage.text = '';
-            },
-            // filteredName: function() {
-            //     return this.contacts.filter(item => {
-            //       return item.name.toLowerCase().includes(this.src.toLowerCase());
-            //     });
-            //   }
-        },
 
 
 
@@ -224,7 +238,7 @@ function init() {
 
 
 
-    });
+});
 
 
 }
