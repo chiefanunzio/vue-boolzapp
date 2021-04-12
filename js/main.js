@@ -57,7 +57,53 @@ function init() {
                             date: '10/01/2020 16:15:22',
                             text: 'Tutto fatto!',
                             status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:30:55',
+                            text: 'Hai portato a spasso il cane?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            text: 'Ricordati di dargli da mangiare',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:15:22',
+                            text: 'Tutto fatto!',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:30:55',
+                            text: 'Hai portato a spasso il cane?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            text: 'Ricordati di dargli da mangiare',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:15:22',
+                            text: 'Tutto fatto!',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:30:55',
+                            text: 'Hai portato a spasso il cane?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            text: 'Ricordati di dargli da mangiare',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:15:22',
+                            text: 'Tutto fatto!',
+                            status: 'received'
                         }
+                        
                     ],
                 },
                 {
@@ -124,18 +170,6 @@ function init() {
         },
         methods: {
 
-            // getMessages: function (contact) {
-
-            //     let messages = this.messages = contact.messages;
-              
-            //     messages.forEach(msg => {
-            //         let text = msg['text'];
-            //         let data = msg['date'];
-            //         let status = msg['status'];
-
-            //         console.log(text);
-            //     });
-            //},
             getIndex: function(i){
 
                 this.indexContact = i;

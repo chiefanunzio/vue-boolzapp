@@ -49,11 +49,7 @@ section.rigth {
     flex-basis: 70%;
     background-color: rgb(11 16 25);
     background-image: url("../img/pattern.png");
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
+    overflow:auto ;
 }
 
 main {
@@ -94,6 +90,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 70%;
+    position: fixed;
+    top: 35px;
+    right: 0;
 
 }
 
@@ -175,6 +175,10 @@ footer {
     height: 60px;
     width: 100%;
     background-color: rgb(11 16 25);
+    width: 70%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 footer ul {
@@ -211,6 +215,7 @@ footer ul li a {
 
 .messages{
     width: 100%;
+    padding: 20px;
 }
 
 .messages ul{
@@ -218,6 +223,11 @@ footer ul li a {
     flex-direction: column;
     height: 100%;
     
+}
+.messages ul li{
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
 }
 
 
