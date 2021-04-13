@@ -55,12 +55,12 @@
                         <div class="avatar">
                             <!--avatar utente -->
                             <div>
-                                <img :src="filteredName()[indexContact].avatar" alt="">
+                                <img :src="name.avatar" alt="">
                                 <h2> {{name.name}}</h2>
                                 <!--nome utente da js-->
                             </div>
 
-                            <span>13.13</span>
+                            
                             <!--ora da js-->
                         </div>
                     </li>
@@ -74,8 +74,8 @@
                 <div class="top-nav">
                     <div class="avatar">
                         <!--avatar da mostrare -->
-                        <img :src="contacts[indexContact].avatar" alt="">
-                        <h2>{{contacts[indexContact].name}}</h2>
+                        <img :src="filteredName()[indexContact].avatar" alt="">
+                        <h2>{{filteredName()[indexContact].name}}</h2>
                         <!--nome nuovo utente da mostrare-->
                     </div>
                     <div class="action-menu">
@@ -94,7 +94,7 @@
                 <div class="messages">
                     <!--messaggi output da js-->
 
-                    <ul v-for="msg in contacts[indexContact].messages">
+                    <ul v-for="msg in filteredName()[indexContact].messages">
                         <li class="user" v-if="msg.status == 'sent'">
                             <p>{{msg.text}}</p>
                             <span>{{msg.date}}</span>
