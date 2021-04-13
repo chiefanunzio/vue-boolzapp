@@ -70,7 +70,7 @@
 
             <!-- sezione destra messaggistica -->
             <section class="rigth">
-
+                
                 <div class="top-nav">
                     <div class="avatar">
                         <!--avatar da mostrare -->
@@ -91,7 +91,7 @@
 
                 </div>
 
-                <div class="messages">
+                <div class="messages ">
                     <!--messaggi output da js-->
 
                     <ul v-for="msg in filteredName()[indexContact].messages">
@@ -102,23 +102,26 @@
                         <li class="contact" v-else>
                             <p>{{msg.text}}</p>
                             <span>{{msg.date}}</span>
+                            
                         </li>
                     </ul>
+
+                    
 
 
 
                 </div>
                 <!-- barra di input nuovo messaggio  -->
-                <footer>
-                    <ul>
-                        <li><a href="#"><i class="far fa-grin"></i></a></li>
-                        <li><a href="#"><i class="fas fa-paperclip"></i></a></li>
-                        <li class="grow"><input v-model="newMessage.text" v-on:keyUp.enter="addMessage" class="msg-user"
-                                placeholder="scrivi un messaggio" type="text"></li>
-                        <li><a href="#"><i class="fas fa-microphone"></i></a></li>
-                    </ul>
-                </footer>
             </section>
+            <footer>
+                <ul>
+                    <li><a href="#"><i class="far fa-grin"></i></a></li>
+                    <li><a href="#"><i class="fas fa-paperclip"></i></a></li>
+                    <li class="grow"><input v-model="newMessage.text" v-on:keyUp.enter="addMessage" class="msg-user"
+                            placeholder="scrivi un messaggio" type="text"></li>
+                    <li><a href="#"><i class="fas fa-microphone"></i></a></li>
+                </ul>
+            </footer>
         </main>
 
 
