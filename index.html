@@ -51,11 +51,11 @@
                 </div>
 
                 <ul>
-                    <li @click="getIndex(index)" v-for="(name, index ) in contacts">
+                    <li  @click="getIndex(index)" v-for="(name, index ) in filteredName()">
                         <div class="avatar">
                             <!--avatar utente -->
                             <div>
-                                <img :src="name.avatar" alt="">
+                                <img :src="filteredName()[indexContact].avatar" alt="">
                                 <h2> {{name.name}}</h2>
                                 <!--nome utente da js-->
                             </div>
@@ -97,11 +97,11 @@
                     <ul v-for="msg in contacts[indexContact].messages">
                         <li class="user" v-if="msg.status == 'sent'">
                             <p>{{msg.text}}</p>
-
+                            <span>{{msg.date}}</span>
                         </li>
                         <li class="contact" v-else>
                             <p>{{msg.text}}</p>
-
+                            <span>{{msg.date}}</span>
                         </li>
                     </ul>
 

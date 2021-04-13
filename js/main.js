@@ -35,202 +35,229 @@ function init() {
 
     new Vue({
 
-                el: '#app',
-                data: {
-                    indexContact: 0,
+            el: '#app',
+            data: {
 
-                    contacts: [{
-                            name: 'louise',
-                            avatar: '../img/pg.png',
-                            visible: true,
-                            messages: [{
-                                    date: '10/01/2020 15:30:55',
-                                    text: 'Hai portato a spasso il cane?',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 15:50:00',
-                                    text: 'Ricordati di dargli da mangiare',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 16:15:22',
-                                    text: 'Tutto fatto!',
-                                    status: 'received'
-                                },
-                                {
-                                    date: '10/01/2020 15:30:55',
-                                    text: 'Hai portato a spasso il cane?',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 15:50:00',
-                                    text: 'Ricordati di dargli da mangiare',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 16:15:22',
-                                    text: 'Tutto fatto!',
-                                    status: 'received'
-                                },
-                                {
-                                    date: '10/01/2020 15:30:55',
-                                    text: 'Hai portato a spasso il cane?',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 15:50:00',
-                                    text: 'Ricordati di dargli da mangiare',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 16:15:22',
-                                    text: 'Tutto fatto!',
-                                    status: 'received'
-                                },
-                                {
-                                    date: '10/01/2020 15:30:55',
-                                    text: 'Hai portato a spasso il cane?',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 15:50:00',
-                                    text: 'Ricordati di dargli da mangiare',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 16:15:22',
-                                    text: 'Tutto fatto!',
-                                    status: 'received'
-                                }
 
-                            ],
-                        },
-                        {
-                            name: 'Batman',
-                            avatar: '../img/bat.jpeg',
-                            visible: true,
-                            messages: [{
-                                    date: '20/03/2020 16:30:00',
-                                    text: 'Ciao come stai?',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '20/03/2020 16:30:55',
-                                    text: 'Bene grazie! Stasera ci vediamo?',
-                                    status: 'received'
-                                },
-                                {
-                                    date: '20/03/2020 16:35:00',
-                                    text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                                    status: 'sent'
-                                }
-                            ],
-                        },
-                        {
-                            name: 'Homer',
-                            avatar: '../img/homer.png',
-                            visible: true,
-                            messages: [{
-                                    date: '28/03/2020 10:10:40',
-                                    text: 'La Marianna va in campagna',
-                                    status: 'received'
-                                },
-                                {
-                                    date: '28/03/2020 10:20:10',
-                                    text: 'Sicuro di non aver sbagliato chat?',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '28/03/2020 16:15:22',
-                                    text: 'Ah scusa!',
-                                    status: 'received'
-                                }
-                            ],
-                        },
-                        {
-                            name: 'Bart',
-                            avatar: '../img/bart.png',
-                            visible: true,
-                            messages: [{
-                                    date: '10/01/2020 15:30:55',
-                                    text: 'Lo sai che ha aperto una nuova pizzeria?',
-                                    status: 'sent'
-                                },
-                                {
-                                    date: '10/01/2020 15:50:00',
-                                    text: 'Si, ma preferirei andare al cinema',
-                                    status: 'received'
-                                }
-                            ],
-                        },
-                    ],
-                    newMessage: {
-                        date: '10/01/2020 15:50:00',
-                        text: '',
-                        status: 'sent'
+                contacts: [{
+                        name: 'louise',
+                        avatar: '../img/pg.png',
+                        visible: true,
+                        messages: [{
+                                date: '10/01/2020 15:30:55',
+                                text: 'Hai portato a spasso il cane?',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 15:50:00',
+                                text: 'Ricordati di dargli da mangiare',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 16:15:22',
+                                text: 'Tutto fatto!',
+                                status: 'received'
+                            },
+                            {
+                                date: '10/01/2020 15:30:55',
+                                text: 'Hai portato a spasso il cane?',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 15:50:00',
+                                text: 'Ricordati di dargli da mangiare',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 16:15:22',
+                                text: 'Tutto fatto!',
+                                status: 'received'
+                            },
+                            {
+                                date: '10/01/2020 15:30:55',
+                                text: 'Hai portato a spasso il cane?',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 15:50:00',
+                                text: 'Ricordati di dargli da mangiare',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 16:15:22',
+                                text: 'Tutto fatto!',
+                                status: 'received'
+                            },
+                            {
+                                date: '10/01/2020 15:30:55',
+                                text: 'Hai portato a spasso il cane?',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 15:50:00',
+                                text: 'Ricordati di dargli da mangiare',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 16:15:22',
+                                text: 'Tutto fatto!',
+                                status: 'received'
+                            }
+
+                        ],
                     },
-                    cerca: '',
-
-
+                    {
+                        name: 'Batman',
+                        avatar: '../img/bat.jpeg',
+                        visible: true,
+                        messages: [{
+                                date: '20/03/2020 16:30:00',
+                                text: 'Ciao come stai?',
+                                status: 'sent'
+                            },
+                            {
+                                date: '20/03/2020 16:30:55',
+                                text: 'Bene grazie! Stasera ci vediamo?',
+                                status: 'received'
+                            },
+                            {
+                                date: '20/03/2020 16:35:00',
+                                text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                                status: 'sent'
+                            }
+                        ],
+                    },
+                    {
+                        name: 'Homer',
+                        avatar: '../img/homer.png',
+                        visible: true,
+                        messages: [{
+                                date: '28/03/2020 10:10:40',
+                                text: 'La Marianna va in campagna',
+                                status: 'received'
+                            },
+                            {
+                                date: '28/03/2020 10:20:10',
+                                text: 'Sicuro di non aver sbagliato chat?',
+                                status: 'sent'
+                            },
+                            {
+                                date: '28/03/2020 16:15:22',
+                                text: 'Ah scusa!',
+                                status: 'received'
+                            }
+                        ],
+                    },
+                    {
+                        name: 'Bart',
+                        avatar: '../img/bart.png',
+                        visible: true,
+                        messages: [{
+                                date: '10/01/2020 15:30:55',
+                                text: 'Lo sai che ha aperto una nuova pizzeria?',
+                                status: 'sent'
+                            },
+                            {
+                                date: '10/01/2020 15:50:00',
+                                text: 'Si, ma preferirei andare al cinema',
+                                status: 'received'
+                            }
+                        ],
+                    },
+                ],
+                newMessage: {
+                    date: '',
+                    text: '',
+                    status: 'sent'
                 },
-                methods: {
-
-                    getIndex: function (i) {
-
-                        this.indexContact = i;
-                        console.log(i);
-                    },
+                cerca: '',
+                indexContact: 0,
 
 
+            },
+            methods: {
 
-                    addMessage: function () {
+                getIndex: function (i) {
 
-                        this.newMessage.status = 'sent'
-                        if (this.newMessage.text.length > 0) {
-                            this.contacts[this.indexContact].messages.push({
-                                ...this.newMessage
-                            });
-                            setTimeout(this.botMessage, 2000);
-                            this.newMessage.text = '';
-
-
-                        }
+                    this.indexContact = i;
+                    console.log(i);
+                },
 
 
 
-                    },
-                    botMessage: function () {
-
-                        this.newMessage.text = 'ok';
-                        this.newMessage.status = 'received'
+                addMessage: function () {
+                    this.newMessage.date = this.getDate();
+                    this.newMessage.status = 'sent'
+                    if (this.newMessage.text.length > 0) {
                         this.contacts[this.indexContact].messages.push({
                             ...this.newMessage
                         });
 
                         this.newMessage.text = '';
-                    },
+                        this.botMessage();
+                    }
+
+
+                },
+                botMessage: function () {
+                    const rispMessage = this.indexContact;
+                    setTimeout(() => {
+                        this.newMessage.text = 'ok';
+                        this.newMessage.status = 'received'
+                        this.contacts[rispMessage].messages.push({
+                            ...this.newMessage
+                        });
+                        this.newMessage.text = '';
+
+
+                    }, 2000);
+
+                },
+                getDate: function () {
+
+                    const now = new Date();
+                    const date = now.getDate() + '/' +
+                        now.getMonth() + '/' +
+                        now.getFullYear() + ' ' +
+                        now.getHours() + ':' +
+                        now.getMinutes();
+
+                    return date;
+                },
+
+                filteredName: function () {
+
+                    const filteredContacts = [];
+                    for (let i = 0; i < this.contacts.length; i++) {
+                        const contact = this.contacts[i];
+                        const name = contact.name;
+
+                        if (name.includes(this.cerca)) {
+
+                            filteredContacts.push(contact);
+                        }
+                    }
+                    return filteredContacts;
+
                     // filteredname: function () {
                     //     return this.contacts.filter(elem => {
                     //         return elem.name.toLowerCase().includes(this.cerca.toLowerCase());
                     //     });
-            //         filteredName: function (array , text) {
+                    //         filteredName: function (array , text) {
 
-            //             return this.contacts[this.indexContact].filter(function (contact) {
+                    //             return this.contacts[this.indexContact].filter(function (contact) {
 
-            //                 let reg = RegExp(this.cerca, 'i');
-            //                 return contact.name.match(reg);
-            //                 console.log(filteredName(contacts, ));
-            //             });
+                    //                 let reg = RegExp(this.cerca, 'i');
+                    //                 return contact.name.match(reg);
+                    //                 console.log(filteredName(contacts, ));
+                    //             });
 
-            //             // let reg = RegExp(this.cerca, 'i');
-            //             // return contact.name.match(reg);
-                    
-            // }
+                    //             // let reg = RegExp(this.cerca, 'i');
+                    //             // return contact.name.match(reg);
 
-        },
+                    // }
 
-
+                },
 
 
 
@@ -238,9 +265,12 @@ function init() {
 
 
 
-});
 
 
+            }
+
+
+    });
 }
 
-document.addEventListener('DOMContentLoaded', init)
+    document.addEventListener('DOMContentLoaded', init)
