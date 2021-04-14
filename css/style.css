@@ -255,9 +255,6 @@ footer ul li a {
     cursor: pointer;
 }
 
-.messages ul li i:focus + .messages ul li i div{
-    display: block;
-}
 
 .messages ul li div{
     position: absolute;
@@ -265,8 +262,13 @@ footer ul li a {
     padding: 10px;
     background-color: rgb(43, 42, 48);
     border-radius: 10px;
-    width: 160px;
+    width: 165px;
+    cursor: pointer;
     display: none;
+}
+
+.messages ul li i:hover + .msg ,.msg:hover{
+    display: block;
 }
 
 .contact i{

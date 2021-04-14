@@ -171,6 +171,7 @@ function init() {
                 status: 'sent'
             },
             cerca: '',
+            indexMessage:0,
             indexContact: 0,
             drop:[
                 {
@@ -498,6 +499,13 @@ function init() {
                const msg = this.frasi[index];
                return msg;
             },
+
+            // deleteMsg: function(i){
+                
+
+
+
+            // }
 
             // hoverChevron: function() {
 

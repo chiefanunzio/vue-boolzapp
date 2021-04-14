@@ -99,7 +99,7 @@
                             <p>{{msg.text}}</p>
                             <span>{{msg.date}}</span>
                             <i  class="fas fa-chevron-down"></i>
-                            <div v-for="option in drop" >
+                            <div class="msg" v-for="option in drop" >
                                 {{option.option}}
                             </div>
                         </li>
@@ -109,7 +109,7 @@
                             <p>{{msg.text}}</p>
                             <span>{{msg.date}}</span>
                             <i  class="fas fa-chevron-down"></i>
-                            <div v-for="option in drop">
+                            <div @click="deleteMsg(this.indexContact)" class="msg" v-for="option in drop">
                                 {{option.option}}
                             </div>
                         </li>
