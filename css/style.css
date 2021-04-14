@@ -172,6 +172,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 5;
 }
 
 footer {
@@ -238,9 +239,47 @@ footer ul li a {
 
 .messages ul li {
     border-radius: 7px;
-    padding: 10px 15px;
+    padding: 15px 20px;
     margin-bottom: 40px;
+    position: relative;
 }
+
+.messages ul li i{
+    position: absolute;
+    display: none;
+    top:5px;
+}
+
+.messages ul li:hover i{
+    display: block;
+    cursor: pointer;
+}
+
+.messages ul li div{
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    background-color: rgb(43, 42, 48);
+    border-radius: 10px;
+    width: 160px;
+    display: none;
+}
+
+.contact i{
+    right: 5px;
+}
+.user i{
+    left:5px;
+}
+
+.user div{
+    left:-160px;
+}
+
+.contact div{
+    right:-160px;
+}
+
 
 
 .user {
@@ -256,4 +295,8 @@ footer ul li a {
     padding: 5px 10px;
     color: azure;
     background-color: rgb(80, 75, 75);
+}
+
+.show{
+    display: block;
 }

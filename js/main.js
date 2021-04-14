@@ -173,6 +173,13 @@ function init() {
             cerca: '',
             indexContact: 0,
             
+            drop:[
+                {
+                    option: 'cancella il messaggio',
+                    visible: false,
+                }
+                
+            ],
             frasi: [
                 "Sii audace.",
                 "Segui il consiglio degli esperti.",
@@ -491,6 +498,12 @@ function init() {
                const index = this.getRandom(0, this.frasi.length);
                const msg = this.frasi[index];
                return msg;
+            },
+
+            hoverChevron: function() {
+
+              
+                console.log('hai cliccato');
             }
 
 

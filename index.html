@@ -98,13 +98,24 @@
                         <li v-for="msg in filteredName()[indexContact].messages" class="user" v-if="msg.status == 'sent'">
                             <p>{{msg.text}}</p>
                             <span>{{msg.date}}</span>
+                            <i @click="hoverChevron(option)" class="fas fa-chevron-down"></i>
+                            <div v-for="option in drop">
+                                {{option.option}}
+                            </div>
                         </li>
-                        <li class="contact" v-else>
+
+                            
+                        <li  class="contact" v-else>
                             <p>{{msg.text}}</p>
                             <span>{{msg.date}}</span>
-                            
+                            <i @click="hoverChevron(option)" class="fas fa-chevron-down"></i>
+                            <div v-for="option in drop">
+                                {{option.option}}
+                            </div>
                         </li>
                     </ul>
+
+
 
                     
 
