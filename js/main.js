@@ -38,7 +38,7 @@ function init() {
         el: '#app',
         data: {
 
-
+            active: false,
             contacts: [{
                     name: 'louise',
                     avatar: '../img/pg.png',
@@ -172,11 +172,10 @@ function init() {
             },
             cerca: '',
             indexContact: 0,
-            
             drop:[
                 {
                     option: 'cancella il messaggio',
-                    visible: false,
+                    
                 }
                 
             ],
@@ -500,11 +499,11 @@ function init() {
                return msg;
             },
 
-            hoverChevron: function() {
+            // hoverChevron: function() {
 
-              
-                console.log('hai cliccato');
-            }
+            //     this.active = !this.active;
+            //     console.log('hai cliccato');
+            // }
 
 
 

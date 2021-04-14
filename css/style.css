@@ -255,6 +255,10 @@ footer ul li a {
     cursor: pointer;
 }
 
+.messages ul li i:focus + .messages ul li i div{
+    display: block;
+}
+
 .messages ul li div{
     position: absolute;
     top: 0;
@@ -297,6 +301,4 @@ footer ul li a {
     background-color: rgb(80, 75, 75);
 }
 
-.show{
-    display: block;
-}
+
