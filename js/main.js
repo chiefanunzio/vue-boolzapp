@@ -407,6 +407,9 @@ function init() {
                 "Non preoccuparti di niente."
             ],
 
+        },updated() { 
+            var container = this.$el.querySelector("#right-messages");
+            container.scrollTop = container.scrollHeight;
         },
         
         methods: {

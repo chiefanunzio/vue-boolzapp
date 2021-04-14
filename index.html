@@ -91,11 +91,11 @@
 
                 </div>
 
-                <div class="messages ">
+                <div id="right-messages" class="messages ">
                     <!--messaggi output da js-->
 
-                    <ul v-for="msg in filteredName()[indexContact].messages">
-                        <li class="user" v-if="msg.status == 'sent'">
+                    <ul>
+                        <li v-for="msg in filteredName()[indexContact].messages" class="user" v-if="msg.status == 'sent'">
                             <p>{{msg.text}}</p>
                             <span>{{msg.date}}</span>
                         </li>
