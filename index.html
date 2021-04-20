@@ -2,142 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bzp</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="js/main.js" charset="utf-8"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bzp</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="js/main.js" charset="utf-8"></script>
 </head>
 
 <body>
 
-    <div id="app">
+	<div id="app">
 
-        <header>
-            <div>
-                <span>WhatsApp</span>
-                <ul>
-                    <li><i class="fas fa-minus"></i></li>
-                    <li><i class="far fa-square"></i></li>
-                    <li><i class="fas fa-times"></i></li>
-                </ul>
-            </div>
-        </header>
+		<header>
+			<div>
+				<span>WhatsApp</span>
+				<ul>
+					<li><i class="fas fa-minus"></i></li>
+					<li><i class="far fa-square"></i></li>
+					<li><i class="fas fa-times"></i></li>
+				</ul>
+			</div>
+		</header>
 
-        <main>
-            <!-- sezione sinistra di contatti -->
-            <section class="left">
-                <div class="top-head">
-                    <div class="avatar">
-                        <!--avatar utente -->
-                        <img src="img/avatar.png" alt="">
-                    </div>
-                    <div>
-                        <a href="#">+</a>
-                        <a href="#"><i class="fas fa-ellipsis-h"></i></a>
-                    </div>
+		<main>
+			<!-- sezione sinistra di contatti -->
+			<section class="left">
+				<div class="top-head">
+					<div class="avatar">
+						<!--avatar utente -->
+						<img src="img/avatar.png" alt="">
+					</div>
+					<div>
+						<a href="#">+</a>
+						<a href="#"><i class="fas fa-ellipsis-h"></i></a>
+					</div>
 
-                </div>
+				</div>
 
-                <div class="search-contact">
-                    <!--barra ricerca contatti-->
-                    <div>
-                        <i class="fas fa-search"></i>
-                        <input placeholder="cerca conversazione" v-model="cerca" type="text">
-                    </div>
-                </div>
+				<div class="search-contact">
+					<!--barra ricerca contatti-->
+					<div>
+						<i class="fas fa-search"></i>
+						<input placeholder="cerca conversazione" v-model="cerca" type="text">
+					</div>
+				</div>
 
-                <ul>
-                    <li  @click="getIndex(index)" v-for="(name, index ) in filteredName()">
-                        <div class="avatar">
-                            <!--avatar utente -->
-                            <div>
-                                <img :src="name.avatar" alt="">
-                                <h2> {{name.name}}</h2>
-                                <!--nome utente da js-->
-                            </div>
-
-                            
-                            <!--ora da js-->
-                        </div>
-                    </li>
-                </ul>
-            </section>
+				<ul>
+					<li @click="getIndex(index)" v-for="(name, index ) in filteredName()">
+						<div class="avatar">
+							<!--avatar utente -->
+							<div>
+								<img :src="name.avatar" alt="">
+								<h2> {{name.name}}</h2>
+								<!--nome utente da js-->
+							</div>
 
 
-            <!-- sezione destra messaggistica -->
-            <section class="rigth">
-                
-                <div class="top-nav">
-                    <div class="avatar">
-                        <!--avatar da mostrare -->
-                        <img :src="filteredName()[indexContact].avatar" alt="">
-                        <h2>{{filteredName()[indexContact].name}}</h2>
-                        <!--nome nuovo utente da mostrare-->
-                    </div>
-                    <div class="action-menu">
-                        <ul>
-                            <li><a href="#"><i class="fas fa-video"></i></a></li>
-                            <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#"><i class="fas fa-search"></i></a></li>
-                            <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div id="right-messages" class="messages ">
-                    <!--messaggi output da js-->
-
-                    <ul>
-                        <li v-for="msg in filteredName()[indexContact].messages" class="user" v-if="msg.status == 'sent'">
-                            <p>{{msg.text}}</p>
-                            <span>{{msg.date}}</span>
-                            <i  class="fas fa-chevron-down"></i>
-                            <div class="msg" v-for="option in drop" >
-                                {{option.option}}
-                            </div>
-                        </li>
-
-                            
-                        <li  class="contact" v-else>
-                            <p>{{msg.text}}</p>
-                            <span>{{msg.date}}</span>
-                            <i  class="fas fa-chevron-down"></i>
-                            <div @click="deleteMsg(this.indexContact)" class="msg" v-for="option in drop">
-                                {{option.option}}
-                            </div>
-                        </li>
-                    </ul>
+							<!--ora da js-->
+						</div>
+					</li>
+				</ul>
+			</section>
 
 
+			<!-- sezione destra messaggistica -->
+			<section class="rigth">
 
-                    
+				<div class="top-nav">
+					<div class="avatar">
+						<!--avatar da mostrare -->
+						<img :src="filteredName()[indexContact].avatar" alt="">
+						<h2>{{filteredName()[indexContact].name}}</h2>
+						<!--nome nuovo utente da mostrare-->
+					</div>
+					<div class="action-menu">
+						<ul>
+							<li><a href="#"><i class="fas fa-video"></i></a></li>
+							<li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
+						</ul>
+						<ul>
+							<li><a href="#"><i class="fas fa-search"></i></a></li>
+							<li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="right-messages" class="messages ">
+					<!--messaggi output da js-->
+
+					<ul>
+						<li v-for="msg in filteredName()[indexContact].messages" class="user" v-if="msg.status == 'sent'">
+							<p>{{msg.text}}</p>
+							<span>{{msg.date}}</span>
+							<i class="fas fa-chevron-down"></i>
+							<div class="msg" v-for="option in drop">
+								{{option.option}}
+							</div>
+						</li>
+
+
+						<li class="contact" v-else>
+							<p>{{msg.text}}</p>
+							<span>{{msg.date}}</span>
+							<i class="fas fa-chevron-down"></i>
+							<div @click="deleteMsg(this.indexContact)" class="msg" v-for="option in drop">
+								{{option.option}}
+							</div>
+						</li>
+					</ul>
 
 
 
-                </div>
-                <!-- barra di input nuovo messaggio  -->
-            </section>
-            <footer>
-                <ul>
-                    <li><a href="#"><i class="far fa-grin"></i></a></li>
-                    <li><a href="#"><i class="fas fa-paperclip"></i></a></li>
-                    <li class="grow"><input v-model="newMessage.text" v-on:keyUp.enter="addMessage" class="msg-user"
-                            placeholder="scrivi un messaggio" type="text"></li>
-                    <li><a href="#"><i class="fas fa-microphone"></i></a></li>
-                </ul>
-            </footer>
-        </main>
 
 
 
-    </div>
+
+				</div>
+				<!-- barra di input nuovo messaggio  -->
+			</section>
+			<footer>
+				<ul>
+					<li><a href="#"><i class="far fa-grin"></i></a></li>
+					<li><a href="#"><i class="fas fa-paperclip"></i></a></li>
+					<li class="grow"><input v-model="newMessage.text" v-on:keyUp.enter="addMessage" class="msg-user"
+							placeholder="scrivi un messaggio" type="text"></li>
+					<li><a href="#"><i class="fas fa-microphone"></i></a></li>
+				</ul>
+			</footer>
+		</main>
+
+
+
+	</div>
 </body>
 
 </html>

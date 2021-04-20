@@ -41,7 +41,7 @@ function init() {
             active: false,
             contacts: [{
                     name: 'louise',
-                    avatar: '../img/pg.png',
+                    avatar: 'img/pg.png',
                     visible: true,
                     messages: [{
                             date: '10/01/2020 15:30:55',
@@ -108,7 +108,7 @@ function init() {
                 },
                 {
                     name: 'Batman',
-                    avatar: '../img/bat.jpeg',
+                    avatar: 'img/bat.jpeg',
                     visible: true,
                     messages: [{
                             date: '20/03/2020 16:30:00',
@@ -129,7 +129,7 @@ function init() {
                 },
                 {
                     name: 'Homer',
-                    avatar: '../img/homer.png',
+                    avatar: 'img/homer.png',
                     visible: true,
                     messages: [{
                             date: '28/03/2020 10:10:40',
@@ -150,7 +150,7 @@ function init() {
                 },
                 {
                     name: 'Bart',
-                    avatar: '../img/bart.png',
+                    avatar: 'img/bart.png',
                     visible: true,
                     messages: [{
                             date: '10/01/2020 15:30:55',
@@ -461,10 +461,10 @@ function init() {
 
                 const now = new Date();
                 const date = now.getDate() + '/' +
-                    now.getMonth() + '/' +
-                    now.getFullYear() + ' ' +
-                    now.getHours() + ':' +
-                    now.getMinutes();
+                             now.getMonth() + '/' +
+                             now.getFullYear() + ' ' +
+                             now.getHours() + ':' +
+                             now.getMinutes();
 
                 return date;
             },
